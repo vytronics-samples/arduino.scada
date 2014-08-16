@@ -1,0 +1,27 @@
+{
+    "name": "arduino.scada",
+    "version": "0.0.1",
+    "description": "Vytronics HMI SCADA project talking to Arduino board.",
+    "keywords": ["SCADA", "HMI", "DCS", "industrial controls", "arduino",
+                 "Vytronics"],
+    "author": {
+        "name" : "Chuck Weissman",
+        "email" : "support@vytronics.com",
+        "url" : "http://www.vytronics.com/"
+    },
+    "homepage": "http://www.vytronics.com",
+    "license": "AGPL-3.0",
+    "main": "application.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vytronics-samples/arduino-scada.git"
+    },
+    "bugs": {
+        "url" : "http://github.com/vytronics-samples/arduino-scada/issues",
+        "email" : "support@vytronics.com"
+    },
+    "dependencies": {
+        "vytronics.hmi": "~0.0.0",
+        "arduino.vytronics": "~0.0.0"
+    }
+}

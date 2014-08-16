@@ -1,0 +1,133 @@
+# project.yml for vytronics.project demo project
+#
+{
+
+    #Define templates that can be aliased later in the file
+    #Note that the templates array itself has no meaning to the
+    #application but can be used by tooling. There are no guideline
+    #yet for defining tool friendly templating. Will leave that to
+    #the community for input
+    templates: [
+  
+      #Tag value_info template for defining a digital ON|OFF
+      #discrete tag
+      &ON_OFF_VALUE_T {
+        #The value_info object is used to assign states based
+        #on the raw telemetry data
+            type: "discrete",
+            map: [  { value: 0, state: "OFF"},
+                    { value: 1, state: "ON"} ],
+            comment: "Digital ON OFF."
+      },
+      
+      #Tag value_info template for defining a pin state
+      #value type
+      &PIN_MODE_VALUE_T {
+        #The value_info object is used to assign states based
+        #on the raw telemetry data
+            type: "discrete",
+            map: [  { value: 0, state: "INPUT"},
+                    { value: 1, state: "OUTPUT"},
+                    #TODO - add others
+                    { value: 16, statue: "UNKNOWN"} ],
+            comment: "Pin modes."
+      }
+    ],
+    
+    # Server section - server config vars
+    server: {
+        listen_ip: "localhost",
+        listen_port: 8000,
+        log_level: 'warn',
+        home_page: 'arduino.html' #override index.html default
+    },
+
+    # Drivers section - No drivers listed. Project will load only the built in
+    # sys and sim drivers. A Modbus driver module will be available for the first
+    # stable release.
+    drivers: {
+        my_arduino: {
+            uri: "arduino.vytronics",
+            config: {
+                port_name: 'COM3',
+                log_level: 'warn',
+                #Set update rate way less than the default 19ms
+                sampling_interval: 1000 #milliseconds
+            }
+        }
+    },
+    
+    # Tags section - define HMI tags here
+    tags: {
+        #goes true or false based on board connected. Use it to light the power LED
+        "board.ready": {
+            driverinfo: { id: "my_arduino", item: "ready" },
+        },
+        "digital.pin.13.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:13:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.13.value": {
+            driverinfo: { id: "my_arduino", item: "digital:13:output" },
+            value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.12.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:12:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.12.value": {         
+            driverinfo: { id: "my_arduino", item: "digital:12:output" },
+            value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.11.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:11:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.11.value": {         
+            driverinfo: { id: "my_arduino", item: "digital:11:input" },
+            value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.10.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:10:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.10.value": {         
+            driverinfo: { id: "my_arduino", item: "digital:10:input" },
+            value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.9.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:9:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.9.value": {         
+            driverinfo: { id: "my_arduino", item: "digital:9:input" },
+            value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.8.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:8:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.8.value": {         
+           driverinfo: { id: "my_arduino", item: "digital:8:input" },
+           value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "analog.pin.0.value": {         
+           driverinfo: { id: "my_arduino", item: "analog:0:input" }
+        },
+        "analog.pin.1.value": {         
+           driverinfo: { id: "my_arduino", item: "analog:1:input" }
+        },
+        "analog.pin.2.value": {         
+           driverinfo: { id: "my_arduino", item: "analog:2:input" }
+        },
+        "analog.pin.3.value": {         
+           driverinfo: { id: "my_arduino", item: "analog:3:input" }
+        },
+        "analog.pin.4.value": {         
+           driverinfo: { id: "my_arduino", item: "analog:4:input" }
+        },
+        "analog.pin.5.value": {         
+           driverinfo: { id: "my_arduino", item: "analog:5:input" }
+        }
+    }
+}

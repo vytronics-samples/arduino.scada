@@ -28,8 +28,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.06"
-     inkscape:cx="203.15232"
-     inkscape:cy="191.25487"
+     inkscape:cx="297.69476"
+     inkscape:cy="228.99072"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -79,14 +79,16 @@
        x="580.19781"
        y="647.20282"
        inkscape:transform-center-x="2.3076923"
-       inkscape:transform-center-y="-2.6923077" />
+       inkscape:transform-center-y="-2.6923077"
+       vy:instrument="vyhmi.map_style(this, 'txLED', 'fill', ['gray', 'red'])" />
     <rect
        style="fill:#c8c8c8;fill-opacity:1"
        id="rect3928-4"
        width="10"
        height="10.714286"
        x="562.42859"
-       y="647.14789" />
+       y="647.14789"
+       vy:instrument="vyhmi.map_style(this, 'rxLED', 'fill', ['gray', 'red'])" />
     <g
        id="digital.pin.13"
        class="digital_pin"
@@ -251,7 +253,7 @@
        y="912.60944"
        class="lamp"
        id="rect3955-6-7"
-       vy:instrument="vyhmi.map_style(this, 'board.ready', 'fill', ['gray', 'red'])" />
+       vy:instrument="vyhmi.map_style(this, 'ready', 'fill', ['gray', 'red'])" />
     <g
        id="analog.pin.0"
        class="analog_pin"
@@ -509,6 +511,214 @@
            x="153.02109"
            id="tspan2998-8-2-9-5"
            sodipodi:role="line">000000</tspan></text>
+    </g>
+    <g
+       id="digital.pin.7"
+       class="digital_pin"
+       transform="translate(-1.8019415,150.96862)">
+      <rect
+         id="rect3955-74"
+         class="lamp"
+         y="653.18976"
+         x="692.4483"
+         height="17.241379"
+         width="18.965517"
+         style="fill:#c8c8c8;fill-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2996-5-0"
+         y="667.54089"
+         x="726.3136"
+         style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans"
+         xml:space="preserve"
+         class="mode_txt"><tspan
+           style="font-size:16px"
+           y="667.54089"
+           x="726.3136"
+           id="tspan2998-8-9"
+           sodipodi:role="line">MODE?</tspan></text>
+    </g>
+    <g
+       transform="translate(-1.8019415,171.86859)"
+       id="digital.pin.6"
+       class="digital_pin">
+      <rect
+         id="rect3955-7-8"
+         class="lamp"
+         y="653.18976"
+         x="692.4483"
+         height="17.241379"
+         width="18.965517"
+         style="fill:#c8c8c8;fill-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2996-5-4-8"
+         y="667.54089"
+         x="726.3136"
+         style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans"
+         xml:space="preserve"
+         class="mode_txt"><tspan
+           style="font-size:16px"
+           y="667.54089"
+           x="726.3136"
+           id="tspan2998-8-0-2"
+           sodipodi:role="line">MODE?</tspan></text>
+    </g>
+    <g
+       transform="translate(-1.8019415,192.76854)"
+       id="digital.pin.5"
+       class="digital_pin">
+      <rect
+         id="rect3955-4-5"
+         class="lamp"
+         y="653.18976"
+         x="692.4483"
+         height="17.241379"
+         width="18.965517"
+         style="fill:#c8c8c8;fill-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2996-5-8-5"
+         y="667.54089"
+         x="726.3136"
+         style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans"
+         xml:space="preserve"
+         class="mode_txt"><tspan
+           style="font-size:16px"
+           y="667.54089"
+           x="726.3136"
+           id="tspan2998-8-8-1"
+           sodipodi:role="line">MODE?</tspan></text>
+    </g>
+    <g
+       transform="translate(-1.8019415,213.66851)"
+       id="digital.pin.4"
+       class="digital_pin">
+      <rect
+         id="rect3955-45-1"
+         class="lamp"
+         y="653.18976"
+         x="692.4483"
+         height="17.241379"
+         width="18.965517"
+         style="fill:#c8c8c8;fill-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2996-5-5-1"
+         y="667.54089"
+         x="726.3136"
+         style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans"
+         xml:space="preserve"
+         class="mode_txt"><tspan
+           style="font-size:16px"
+           y="667.54089"
+           x="726.3136"
+           id="tspan2998-8-1-5"
+           sodipodi:role="line">MODE?</tspan></text>
+    </g>
+    <g
+       transform="translate(-1.8019415,234.56848)"
+       id="digital.pin.3"
+       class="digital_pin">
+      <rect
+         id="rect3955-1-7"
+         class="lamp"
+         y="653.18976"
+         x="692.4483"
+         height="17.241379"
+         width="18.965517"
+         style="fill:#c8c8c8;fill-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2996-5-1-6"
+         y="667.54089"
+         x="726.3136"
+         style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans"
+         xml:space="preserve"
+         class="mode_txt"><tspan
+           style="font-size:16px"
+           y="667.54089"
+           x="726.3136"
+           id="tspan2998-8-5-1"
+           sodipodi:role="line">MODE?</tspan></text>
+    </g>
+    <g
+       transform="translate(-1.8019415,255.46844)"
+       id="digital.pin.2"
+       class="digital_pin">
+      <rect
+         id="rect3955-6-2"
+         class="lamp"
+         y="653.18976"
+         x="692.4483"
+         height="17.241379"
+         width="18.965517"
+         style="fill:#c8c8c8;fill-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2996-5-14-3"
+         y="667.54089"
+         x="726.3136"
+         style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans"
+         xml:space="preserve"
+         class="mode_txt"><tspan
+           style="font-size:16px"
+           y="667.54089"
+           x="726.3136"
+           id="tspan2998-8-2-2"
+           sodipodi:role="line">MODE?</tspan></text>
+    </g>
+    <g
+       transform="translate(-1.8019415,276.3684)"
+       id="digital.pin.1"
+       class="digital_pin">
+      <rect
+         id="rect3955-1-7-1"
+         class="lamp"
+         y="653.18976"
+         x="692.4483"
+         height="17.241379"
+         width="18.965517"
+         style="fill:#c8c8c8;fill-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2996-5-1-6-6"
+         y="667.54089"
+         x="726.3136"
+         style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans"
+         xml:space="preserve"
+         class="mode_txt"><tspan
+           style="font-size:16px"
+           y="667.54089"
+           x="726.3136"
+           id="tspan2998-8-5-1-8"
+           sodipodi:role="line">MODE?</tspan></text>
+    </g>
+    <g
+       transform="translate(-1.8019415,297.26836)"
+       id="digital.pin.0"
+       class="digital_pin">
+      <rect
+         id="rect3955-6-2-7"
+         class="lamp"
+         y="653.18976"
+         x="692.4483"
+         height="17.241379"
+         width="18.965517"
+         style="fill:#c8c8c8;fill-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2996-5-14-3-6"
+         y="667.54089"
+         x="726.3136"
+         style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans"
+         xml:space="preserve"
+         class="mode_txt"><tspan
+           style="font-size:16px"
+           y="667.54089"
+           x="726.3136"
+           id="tspan2998-8-2-2-1"
+           sodipodi:role="line">MODE?</tspan></text>
     </g>
   </g>
 </svg>

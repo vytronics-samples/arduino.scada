@@ -49,8 +49,11 @@
         my_arduino: {
             uri: "arduino.vytronics",
             config: {
-                port_name: 'COM3',
-                log_level: 'warn',
+                #Many config items can be overwritten via setting the associated env var
+                #
+                sim_mode: !!vy/env DRIVER_SIM_MODE:false,
+                port_name: !!vy/env DRIVER_PORT:COM3,
+                log_level: !!vy/env DRIVER_LOG_LEVEL:warn,
                 #Set update rate way less than the default 19ms
                 sampling_interval: 1000 #milliseconds
             }

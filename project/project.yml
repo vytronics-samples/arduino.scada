@@ -53,7 +53,7 @@
                 #
                 sim_mode: !!vy/env DRIVER_SIM_MODE:false,
                 port_name: !!vy/env DRIVER_PORT:COM3,
-                log_level: !!vy/env DRIVER_LOG_LEVEL:warn,
+                log_level: !!vy/env DRIVER_LOG_LEVEL:debug,
                 #Set update rate way less than the default 19ms
                 sampling_interval: 1000 #milliseconds
             }
@@ -66,6 +66,16 @@
         "board.ready": {
             driverinfo: { id: "my_arduino", item: "ready" },
         },
+        
+        #For Rx and Tx LEDs
+        "rxLED": {
+            driverinfo: { id: "my_arduino", item: "rxLED" }
+        },
+        "txLED": {
+            driverinfo: { id: "my_arduino", item: "txLED" }
+        },
+        
+        
         "digital.pin.13.mode": {
             driverinfo: { id: "my_arduino", item: "digital:13:mode" },
             value_info: { <<: *PIN_MODE_VALUE_T }
@@ -112,6 +122,70 @@
         },
         "digital.pin.8.value": {         
            driverinfo: { id: "my_arduino", item: "digital:8:input" },
+           value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.7.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:7:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.7.value": {         
+           driverinfo: { id: "my_arduino", item: "digital:7:input" },
+           value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.6.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:6:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.6.value": {         
+           driverinfo: { id: "my_arduino", item: "digital:6:input" },
+           value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.5.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:5:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.5.value": {         
+           driverinfo: { id: "my_arduino", item: "digital:5:input" },
+           value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.4.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:4:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.4.value": {         
+           driverinfo: { id: "my_arduino", item: "digital:4:input" },
+           value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.3.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:3:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.3.value": {         
+           driverinfo: { id: "my_arduino", item: "digital:3:input" },
+           value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.2.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:2:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.2.value": {         
+           driverinfo: { id: "my_arduino", item: "digital:2:input" },
+           value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.1.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:1:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.1.value": {         
+           driverinfo: { id: "my_arduino", item: "digital:1:input" },
+           value_info: { <<: *ON_OFF_VALUE_T }
+        },
+        "digital.pin.0.mode": {
+            driverinfo: { id: "my_arduino", item: "digital:0:mode" },
+            value_info: { <<: *PIN_MODE_VALUE_T }
+        },
+        "digital.pin.0.value": {         
+           driverinfo: { id: "my_arduino", item: "digital:0:input" },
            value_info: { <<: *ON_OFF_VALUE_T }
         },
         "analog.pin.0.value": {         

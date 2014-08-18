@@ -53,7 +53,7 @@
                 #
                 sim_mode: !!vy/env DRIVER_SIM_MODE:false,
                 port_name: !!vy/env DRIVER_PORT:COM3,
-                log_level: !!vy/env DRIVER_LOG_LEVEL:debug,
+                log_level: !!vy/env DRIVER_LOG_LEVEL:warn,
                 #Set update rate way less than the default 19ms
                 sampling_interval: 1000 #milliseconds
             }
@@ -63,7 +63,7 @@
     # Tags section - define HMI tags here
     tags: {
         #goes true or false based on board connected. Use it to light the power LED
-        "board.ready": {
+        "ready": {
             driverinfo: { id: "my_arduino", item: "ready" },
         },
         

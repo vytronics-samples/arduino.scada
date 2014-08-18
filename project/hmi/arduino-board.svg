@@ -80,7 +80,7 @@
        y="647.20282"
        inkscape:transform-center-x="2.3076923"
        inkscape:transform-center-y="-2.6923077"
-       vy:instrument="vyhmi.map_style(this, 'txLED', 'fill', ['gray', 'red'])" />
+       vy:instrument="vyhmi.map_style(this, 'txLED', 'fill', ['gray', 'orange'])" />
     <rect
        style="fill:#c8c8c8;fill-opacity:1"
        id="rect3928-4"
@@ -88,7 +88,7 @@
        height="10.714286"
        x="562.42859"
        y="647.14789"
-       vy:instrument="vyhmi.map_style(this, 'rxLED', 'fill', ['gray', 'red'])" />
+       vy:instrument="vyhmi.map_style(this, 'rxLED', 'fill', ['gray', '#00FF00'])" />
     <g
        id="digital.pin.13"
        class="digital_pin"

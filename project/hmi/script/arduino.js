@@ -64,7 +64,7 @@ function instrument_board() {
     };
     
     Object.getOwnPropertyNames(instrument_classes).forEach( function (class_name){
-        var elems = elem.getElementsByClassName(class_name);
+        var elems = elem.querySelectorAll('.' + class_name);
         for (var i=0; i<elems.length; i++){
             instrument_classes[class_name](elems[i]);
         }
@@ -78,8 +78,8 @@ where x = the pin number.
 */
 function instr_digital_pin(elem){
         
-    var LED_elem = elem.getElementsByClassName('lamp')[0];
-    var MODE_elem = elem.getElementsByClassName('mode_txt')[0];
+    var LED_elem = elem.querySelector('.lamp');
+    var MODE_elem = elem.querySelector('.mode_txt');
     var mode, value; //Remember current mode and value.
     
     //Subscribe to value tag and apply to the lamp graphic
@@ -117,10 +117,10 @@ where x = the pin number.
 */
 function instr_analog_pin(elem){
         
-    var LED_elem = elem.getElementsByClassName('lamp')[0];
-    var readout_elem = elem.getElementsByClassName('readout')[0];
-    var bar_elem = elem.getElementsByClassName('bar')[0];
-    var bar_background_elem = elem.getElementsByClassName('bar_background')[0];
+    var LED_elem = elem.querySelector('.lamp');
+    var readout_elem = elem.querySelector('.readout');
+    var bar_elem = elem.querySelector('.bar');
+    var bar_background_elem = elem.querySelector('.bar_background');
     
     //If we do not scale the analog values they will be between 0 and 1023
     

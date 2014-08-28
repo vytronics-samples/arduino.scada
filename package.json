@@ -21,7 +21,7 @@
         "email" : "support@vytronics.com"
     },
     "dependencies": {
-        "vytronics.hmi": "~0.0.0",
-        "arduino.vytronics": "~0.0.0"
+        "vytronics.hmi": "latest",
+        "arduino.vytronics": "latest"
     }
 }

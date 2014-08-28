@@ -31,14 +31,24 @@
                     #TODO - add others
                     { value: 16, statue: "UNKNOWN"} ],
             comment: "Pin modes."
-      }
+      },
+
+      #Tag value_info template for defining an analog
+      #to engineering units, i.e., scaling
+      &VOLTS_VALUE_T {
+        #The value_info object is used to assign states based
+        #on the raw telemetry data
+            type: "analog",
+            #Scale raw daq value to engineering units 0-100
+            from_daq: !!js/function 'function (raw) { return raw*(100.0/1023.0); }',
+            comment: "Scale a raw analog 0-1023 to 0-50 volts"
+      }           
     ],
     
     # Server section - server config vars
     server: {
         listen_ip: "localhost",
         listen_port: 8000,
-        log_level: 'warn',
         home_page: 'arduino.html' #override index.html default
     },
 
@@ -74,7 +84,6 @@
         "txLED": {
             driverinfo: { id: "my_arduino", item: "txLED" }
         },
-        
         
         "digital.pin.13.mode": {
             driverinfo: { id: "my_arduino", item: "digital:13:mode" },
@@ -188,8 +197,10 @@
            driverinfo: { id: "my_arduino", item: "digital:0:input" },
            value_info: { <<: *ON_OFF_VALUE_T }
         },
+        #Example using analog scale function to engineering units
         "analog.pin.0.value": {         
-           driverinfo: { id: "my_arduino", item: "analog:0:input" }
+           driverinfo: { id: "my_arduino", item: "analog:0:input" },
+           value_info: { <<: *VOLTS_VALUE_T }
         },
         "analog.pin.1.value": {         
            driverinfo: { id: "my_arduino", item: "analog:1:input" }

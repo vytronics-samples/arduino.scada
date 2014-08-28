@@ -42,7 +42,7 @@ var color_const = {
 };
 
 var board_colors = {
-    DIGI_LED_ON: color_const.yellow,
+    DIGI_LED_ON: color_const.green,
     DIGI_LED_OFF: color_const.white,
     TXRX_LED_ON: color_const.yellow,
     BACKGROUND: color_const.white
@@ -136,7 +136,7 @@ function instr_analog_pin(elem){
     
     //Digital readout
     vyhmi.create_tagsub(tagid, function(tag) {
-        readout_elem.textContent = tag.value;
+        readout_elem.textContent = tag.value.toFixed(2);
     });
     
     //Bar graph

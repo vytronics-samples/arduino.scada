@@ -39,6 +39,7 @@
         #The value_info object is used to assign states based
         #on the raw telemetry data
             type: "analog",
+            num_digits: 2,
             #Scale raw daq value to engineering units 0-100
             from_daq: !!js/function 'function (raw) { return raw*(100.0/1023.0); }',
             comment: "Scale a raw analog 0-1023 to 0-50 volts"
@@ -59,12 +60,11 @@
         my_arduino: {
             uri: "arduino.vytronics",
             config: {
-                #Many config items can be overwritten via setting the associated env var
-                #
-                sim_mode: !!vy/env DRIVER_SIM_MODE:false,
-                port_name: !!vy/env DRIVER_PORT:COM3,
+                #Comment out sim mode and edit port name for real connection
+                sim_mode: true,
+                port_name: COM3,
                 log_level: !!vy/env DRIVER_LOG_LEVEL:warn,
-                #Set update rate way less than the default 19ms
+                #Set update rate way less than the default 19ms of firmata
                 sampling_interval: 1000 #milliseconds
             }
         }

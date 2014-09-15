@@ -48,8 +48,8 @@
     
     # Server section - server config vars
     server: {
-        listen_ip: "localhost",
-        listen_port: 8000,
+        listen_ip: !!vy/env IP:localhost,
+        listen_port: !!vy/env PORT:8000,
         home_page: 'arduino.html' #override index.html default
     },
 
